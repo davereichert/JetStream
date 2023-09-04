@@ -1,0 +1,144 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Ski-Service API",
+    "description": "Server für Abschlussarbeit Modul 294",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:5000",
+  "basePath": "/api/",
+  "tags": [
+    {
+      "name": "Registration",
+      "description": "API für Ski-Service Anmeldung"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/registration": {
+      "post": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Create a new registration",
+        "parameters": [
+          {
+            "name": "registration",
+            "in": "body",
+            "description": "Create a new registration",
+            "schema": {
+              "$ref": "#/definitions/Registration"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New registration is created",
+            "schema": {
+              "$ref": "#/definitions/Registration"
+            }
+          }
+        }
+      } 
+    },
+    "/registrations": {
+      "get": {
+          "tags": [
+            "Registration"
+          ],
+          "summary": "Get all registratons in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/Registrations"
+              }
+            }
+          }
+        }
+    },
+    "/registration/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of registration that we want to find",
+          "type": "integer"
+        }
+      ],
+      "delete": {
+        "summary": "Delete registration with given Id",
+        "tags": [
+          "Registration"
+        ],
+        "responses": {
+          "204": {
+            "description": "Registration is deleted",
+            "schema": {
+              "$ref": "#/definitions/Registration"
+            }
+          }
+        }
+      } 
+    }         
+  },
+  "definitions": {
+    "Registration": {
+      "required": [
+          "id",
+          "name",
+          "email",
+          "create_date",
+          "pickup_date"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string"
+        },
+        "service": {
+          "type": "string"
+        },  
+        "create_date": {
+          "type": "string"
+        },                
+        "pickup_date": {
+          "type": "string"
+        }       
+      }
+    },
+    "Registrations": {
+      "type": "array",
+      "$ref": "#/definitions/Registration"
+    }
+  }
+}

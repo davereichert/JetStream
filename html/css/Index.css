@@ -1,0 +1,67 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+  }
+
+  .navbar {
+    z-index: 100; /* Ein hoher Wert, um sicherzustellen, dass die Navbar immer oben ist */
+    position: relative; /* Stellen Sie sicher, dass die Navbar positioniert ist, damit z-index funktioniert */
+}
+
+.video-container {
+  position: relative;
+  width: 100%; /* oder die gewünschte Breite */
+  height: auto; /* oder die gewünschte Höhe */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: black; 
+  padding-top: 20%;
+  font-size: large;/* oder eine andere Farbe, die sich vom Video abhebt */
+}
+
+.services-overview {
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #f9f9f9; /* Ein heller Hintergrund */
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap; /* Erlaubt den Dienstleistungs-Items, in die nächste Zeile zu springen, wenn der Platz knapp wird */
+  gap: 20px; /* Abstand zwischen den Dienstleistungs-Items */
+}
+
+.service-item {
+  flex: 1;
+  min-width: 200px; /* Minimale Breite für jedes Dienstleistungs-Item */
+  padding: 15px;
+  border: 1px solid #ddd; /* Ein einfacher Rand */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #fff; /* Weißer Hintergrund für jedes Dienstleistungs-Item */
+}
+
+.service-item h3 {
+  margin-top: 0; /* Entfernt den oberen Abstand für den Titel */
+}
+.main-content {
+  min-height: 100vh; /* Stellt sicher, dass der Hauptinhalt mindestens die gesamte Bildschirmhöhe einnimmt */
+}
+
+.navText{
+  font-size: large;
+}

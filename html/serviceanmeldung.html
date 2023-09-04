@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetstream-Service - Serviceanmeldung</title>
+    <!-- Bootstrap CSS einbinden -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" class="navbar" class="navText">
+        <a class="navbar-brand" href="Index.html">
+            <img src=" logo.jpg" alt="Jetstream-Service Logo" width="100" height="100"> <!-- Logo hinzugefügt -->
+            Jetstream-Service
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Services.html">Serviceauftrag</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.html">Kontakt</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+<div class="container mt-5">
+    <h2>Serviceanmeldung</h2>
+    <form>
+        <!-- Kundenname -->
+        <div class="form-group">
+            <label for="customerName">Kundenname:</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Donal Duck"  required>
+        </div>
+
+        <!-- E-Mail -->
+        <div class="form-group">
+            <label for="email">E-Mail:</label>
+            <input type="email" class="form-control" id="email"  placeholder="donald.duck@ente.haus" required>
+        </div>
+
+        <!-- Telefon -->
+        <div class="form-group">
+            <label for="phone">Telefon:</label>
+            <input type="tel" class="form-control" id="phone"  placeholder="+65 982 764 23 65" required>
+        </div>
+
+        <!-- Priorität -->
+        <div class="form-group">
+            <label for="priority">Priorität:</label>
+            <select class="form-control" id="priority" required>
+                <option value="standard">Standard</option>
+                <option value="tief" >Tief</option>
+                <option value="express">Express</option>
+            </select>
+        </div>
+
+        <!-- Datum -->
+        <div class="form-group">
+            <label for="date">Datum:</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+
+        
+        <!-- Ausgewählter Service -->
+        <div class="form-group">
+            <label for="chosenService">Ausgewählter Service:</label>
+            <input type="text" class="form-control" id="chosenService" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="chosenService">Preis</label>
+            <input type="text" class="form-control" id="calculatedPrice" readonly>
+        </div>
+
+
+        <!-- Absenden-Button -->
+        <button type="submit" class="btn btn-primary">Serviceanmeldung absenden</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS, Popper.js und jQuery einbinden -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/Anmeldung.js"></script>
+
+</body>
+</html>

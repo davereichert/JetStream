@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
             contentType: 'application/json;charset=UTF-8',
             dataType: 'json',
             success: function(response) {
-                alert('Daten erfolgreich gesendet!');
+                alert('Auftrag Erfolgreich abgesendet und in bearbeitung!');
             },
             error: function(error) {
                 alert('Ein Fehler ist aufgetreten: ' + error.statusText);

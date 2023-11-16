@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aufträge</title>
+    <!-- Einbinden von Bootstrap CSS für Styling (optional) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" class="navbar" class="navText">
+        <a class="navbar-brand" href="Index.html">
+            <img src=" logo.jpg" alt="Jetstream-Service Logo" width="100" height="100"> <!-- Logo hinzugefügt -->
+            Jetstream-Service
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Services.html">Serviceauftrag</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.html">Kontakt</a>
+                </li>    
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Auftragsliste</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Kundenname</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Priorität</th>
+                    <th>Service</th>
+                    <th>Erstellungsdatum</th>
+                    <th>Abholdatum</th>
+                    <!-- Weitere Spalten nach Bedarf -->
+                </tr>
+            </thead>
+            <tbody id="auftragsTabelle">
+                <!-- Aufträge werden hier eingefügt -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Einbinden von Bootstrap und eigenem JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/auftraege.js"></script>
+</body>
+</html>

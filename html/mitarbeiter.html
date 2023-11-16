@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitarbeiter hinzufügen</title>
+    <!-- Füge Bootstrap CSS hinzu -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" class="navbar" class="navText">
+        <a class="navbar-brand" href="Index.html">
+            <img src=" logo.jpg" alt="Jetstream-Service Logo" width="100" height="100"> <!-- Logo hinzugefügt -->
+            Jetstream-Service
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Services.html">Serviceauftrag</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.html">Kontakt</a>
+                </li>    
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Mitarbeiter hinzufügen</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Vor- und Nachname" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Benutzername:</label>
+                <input type="text" class="form-control" id="username" placeholder="Benutzername" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Passwort:</label>
+                <input type="password" class="form-control" id="password" placeholder="Passwort" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Email-Adresse" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Telefonnummer:</label>
+                <input type="tel" class="form-control" id="telephone" placeholder="Telefonnummer" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Rolle:</label>
+                <select class="form-control" id="role">
+                    <option value="Mitarbeiter">Mitarbeiter</option>
+                    <option value="Administrator">Administrator</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="creationDate">Erstellungsdatum:</label>
+                <input type="date" class="form-control" id="creationDate">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Mitarbeiter hinzufügen</button>
+        </form>
+    </div>
+    <!-- Füge Bootstrap JS und Popper.js hinzu (für bestimmte Bootstrap-Funktionen) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+
+    <script src="js/mitarbeiter.js"></script>
+    
+</body>
+</html>

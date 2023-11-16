@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     
         let data = {
+            id: 0,
             name: customerName,
             email: $('#email').val(),
             phone: $('#phone').val(),
@@ -114,15 +115,15 @@ document.addEventListener("DOMContentLoaded", function() {
         
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:5000/api/registration',
+            url: 'http://localhost:5091/ServiceAuftrag',
             data: JSON.stringify(data),
             contentType: 'application/json;charset=UTF-8',
             dataType: 'json',
             success: function(response) {
                 alert('Auftrag Erfolgreich abgesendet und in bearbeitung!');
             },
-            error: function(error) {
-                alert('Ein Fehler ist aufgetreten: ' + error.statusText);
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('Ein Fehler ist aufgetreten: ' + textStatus + ' (Statuscode: ' + jqXHR.status + ')');
             }
         });
     });

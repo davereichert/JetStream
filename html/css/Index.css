@@ -65,3 +65,24 @@
 .navText{
   font-size: large;
 }
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 250px;
+  
+}
+
+.login-form {
+  width: 100%; /* Maximale Breite innerhalb des Containers */
+}
+
+.form-control, .btn {
+  min-width: 300px; /* Minimale Breite für Formularelemente */
+}
+
+.navItemMove{
+  padding-left: 500px;
+}
